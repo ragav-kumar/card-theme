@@ -1,0 +1,7 @@
+<div *ngIf="page; else nopage" id="content">
+	<div [innerHTML]="page.content.rendered | safeHTML"></div>
+</div>
+<!--<div *ngIf="decalURL">
+	<img [src]="decalURL" class="decal">
+</div>-->
+<ng-template #nopage><h2>Loading...</h2></ng-template>
